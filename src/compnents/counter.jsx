@@ -13,8 +13,13 @@ class Counter extends Component {
       fontWeight: "bold"
     }
 
-    handleIncrement() {
+    {/*constructor() {
+          super();
+          this.handleIncrement = this.handleIncrement.bind(this);
+        }*/}
 
+    handleIncrement = () => {
+      this.setState( { count: this.state.count + 1});
     }
 
     return (
@@ -47,3 +52,5 @@ export default Counter;
 
 
 {/* each map should have a key that is unique, add an id name or object to key */}
+{/*using arraw function is cleaner and simpler than using a constructor*/}
+{/*in react you have to explicitly tell it what has changes using this.setState*/}
