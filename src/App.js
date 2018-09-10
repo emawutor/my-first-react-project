@@ -36,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
-      <NavBar />
+      <NavBar totalCounters={this.state.counters.filter(c => c.value).length} />
       <main className="container">
         <Counters
         counters={this.state.counters}
@@ -51,3 +51,7 @@ class App extends Component {
 }
 
 export default App;
+
+// mount : constructor, render, componentDidMount
+// update : render, componentDidUpdate
+// unmount : componentWillUnmount
